@@ -55,7 +55,7 @@ export default function HeroSection({ onSignup, onLogin, onPostEvent}: HeroSecti
           Play with neighbors. Find a community that moves at your pace.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <div>
           {user ? (
             <button
               onClick={onPostEvent}
@@ -65,21 +65,23 @@ export default function HeroSection({ onSignup, onLogin, onPostEvent}: HeroSecti
             </button>
           ) : (
             <>
+            <div className="flex flex-wrap justify-evenly mb-6">
               <button
                 onClick={onSignup}
-                className="px-8 py-4 rounded-xl bg-lime text-bg font-bold text-base hover:bg-lime/90 active:scale-95 transition-all duration-150 shadow-lg shadow-lime/20"
+                className="px-8 py-4 rounded-xl bg-lime text-bg font-bold text-base hover:cursor-pointer hover:bg-lime-400 active:scale-95 transition-all duration-150 shadow-lg shadow-lime/20"
               >
                 Join MOVR*
               </button>
               <button
                 onClick={onLogin}
-                className="px-8 py-4 rounded-xl border border-white/15 text-white font-medium text-base hover:bg-white/5 active:scale-95 transition-all duration-150"
+                className="px-8 py-4 rounded-xl border border-lime text-white font-medium text-base hover:cursor-pointer hover:text-black hover:bg-lime active:scale-95 transition-colors duration-200"
               >
                 Log in
               </button>
+              </div>
               <p className="text-sm text-white/  font-light">
-          *Must be 18 years or older to join MOVR community 
-        </p>
+                *Must be 18 years or older to join MOVR community
+              </p>
             </>
           )}
         </div>
