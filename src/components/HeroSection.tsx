@@ -26,7 +26,7 @@ export default function HeroSection({ onSignup, onLogin, onPostEvent}: HeroSecti
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lime/10 border border-lime/20 mb-12 mt-14">
           <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
           <span className="text-lime text-xs font-semibold tracking-widest uppercase">
-            Sports community · Berlin and beyond
+            Online Sports community · Berlin and beyond
           </span>
         </div>
 
@@ -47,7 +47,7 @@ export default function HeroSection({ onSignup, onLogin, onPostEvent}: HeroSecti
           </span>
           <span className="block text-lime" style={{ fontSize: 'clamp(3rem,10vw,8rem)', letterSpacing: '-0.02em' }}>
             MOVE TOGETHER.
-          </span>
+          </span> 
         </h1>
 
         <p className="text-lg text-white/80 max-w-xl mx-auto mb-10 font-light leading-relaxed">
@@ -59,7 +59,7 @@ export default function HeroSection({ onSignup, onLogin, onPostEvent}: HeroSecti
           {user ? (
             <button
               onClick={onPostEvent}
-              className="px-8 py-4 rounded-xl bg-lime text-bg font-bold text-base hover:bg-lime/90 active:scale-95 transition-all duration-150 shadow-lg shadow-lime/20"
+              className="px-8 py-4 rounded-xl bg-lime text-bg font-bold text-basehover:cursor-pointer hover:bg-lime-400 active:scale-95 transition-all duration-150 shadow-lg shadow-lime/20"
             >
               Post an activity
             </button>

@@ -21,7 +21,7 @@ export default function UpcomingEvents() {
                 const upcoming = events
                                 .filter((event: Event) => new Date(event.date) >= now )
                                 .sort((a: Event,b: Event) => new Date(a.date).getTime() - new Date(b.date).getTime())
-                                .slice(0,5); //slices off and shows only top 5
+                                .slice(0,6); //slices off and shows only top 6
                 setEvents(upcoming);
                 } catch (err) {
                     const message = err instanceof Error ? err.message: "'Could not load events :( ";
