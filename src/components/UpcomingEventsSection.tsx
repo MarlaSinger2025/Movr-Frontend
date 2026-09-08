@@ -47,7 +47,8 @@ export default function UpcomingEvents() {
                 UPCOMING<br />ACTIVITIES
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-10">
                 {events.map((event) => (
                     <EventCard key={event.id} event={event} />
                 ))}
@@ -66,7 +67,6 @@ export default function UpcomingEvents() {
               </button>
               </>
               )}
-              </div>
               </div>
         </section>
     );
