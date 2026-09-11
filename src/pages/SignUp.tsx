@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import type { SignUpInput } from "../types/User";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import DemoLogin from "../components/DemoLoginButton";
 
 const GENDERS: { value: SignUpInput["gender"]; label: string }[] = [
   { value: "male", label: "Male" },
@@ -415,6 +416,7 @@ export default function SignUpPage() {
           >
             {loading ? "Creating account..." : "Create account"}
           </button>
+          <DemoLogin />
         </form>
 
         <p className="mt-5 text-center text-sm text-white/50">

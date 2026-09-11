@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import DefaultAvatar from "../../assets/img/default_userAvatar.png";
+import DemoLogin from "../DemoLoginButton";
 
 const Navbar = () => {
   const { user, loading, logout } = useAuth();
@@ -44,6 +45,7 @@ const Navbar = () => {
           >
             Login
           </NavLink>
+          <DemoLogin />
         </div>
       )}
 
