@@ -55,6 +55,7 @@ const Navbar = () => {
         {/* Navigation - Desktop view */}
           <div className="hidden sm:flex items-center gap-6">
             {decoyLinks
+              .filter((item) => item.to) // so desktop nav filters out decoy menu links with no routes yet
               .map((item) => (
                 <NavLink key={item.label} to={item.to} className={({ isActive }) => 
                 `text-sm font-medium transition-colors duration-200 hover:underline ${isActive ? 'text-lime-400 font-semibold' : 'text-white'}`
