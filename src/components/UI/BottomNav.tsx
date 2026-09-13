@@ -49,11 +49,11 @@ export default function BottomNav() {
     ) : (
         <footer className="bg-black border-t border-white/10">
                     <div className="w-screen mt-3">
-                        <div className="flex items-start justify-evenly sm:justify-between md:auto px-2 sm:px-4 md:px-auto py-3">
-                            <div className="font-display font-black text-xl tracking-widest uppercase text-white">
+                        <div className="relative flex items-center px-6 sm:px-4 md:px-auto py-3">
+                            <div className="absolute self-start left-2 sm:left-4 font-display font-black text-xl tracking-widest uppercase text-white mr-15">
                                 <p>MOVR</p>
                             </div>
-                            <div className="grid grid-cols-3 gap-3 md:gap-15">
+                            <div className="mx-auto grid grid-cols-3 gap-3 md:gap-15">
                                 <div>
                                     <h2 className="mb-2 text-xs sm:text-sm font-semibold text-white uppercase">About</h2>
                                     <ul className="text-white/60 text-xs sm:text-sm">
@@ -80,7 +80,7 @@ export default function BottomNav() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-row justify-evenly md:justify-end md:px-10 md:gap-18">
+                        <div className="flex flex-row justify-evenly md:justify-center md:px-10 md:gap-18">
                             <img src={Insta} className="w-5" />
                             <img src={LinkedIn} className="w-5" />
                             <img src={Facebook} className="w-5" />

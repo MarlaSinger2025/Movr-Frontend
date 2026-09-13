@@ -41,7 +41,7 @@ export interface SportMeta {
 export const SPORT_CATALOG: Record<SportName, SportMeta> = {
   Running: {
     emoji: '🏃',
-    color: '#C8FA5F',
+    color: '#f2aee5',
     image:
       'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=500&fit=crop&auto=format',
     category: 'Outdoor',
@@ -62,7 +62,7 @@ export const SPORT_CATALOG: Record<SportName, SportMeta> = {
   },
   Climbing: {
     emoji: '🧗',
-    color: '#FB923C',
+    color: '#c25700',
     image:
       'https://images.unsplash.com/photo-1630431155308-bbf2daf27b00?w=800&h=500&fit=crop&auto=format',
     category: 'Indoor',
@@ -83,7 +83,7 @@ export const SPORT_CATALOG: Record<SportName, SportMeta> = {
   },
   Tennis: {
     emoji: '🎾',
-    color: '#A3E635',
+    color: '#fae246',
     image:
       'https://images.unsplash.com/photo-1668507911709-0249e832618d?w=800&h=500&fit=crop&auto=format',
     category: 'Outdoor',
@@ -106,7 +106,7 @@ export const SPORT_CATALOG: Record<SportName, SportMeta> = {
     emoji: '🏐',
     color: '#F97316',
     image:
-      'https://images.unsplash.com/photo-1560090995-01632a28895b?w=800&h=500&fit=crop&auto=format',
+      'https://images.unsplash.com/photo-1567880325673-ccc01edca61c?w=800&h=500&fit=crop&auto=format',
     category: 'Outdoor',
   },
   Badminton: {

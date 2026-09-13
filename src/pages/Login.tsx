@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import type { LoginInput } from "../types/User";
+import DemoLogin from "../components/DemoLoginButton";
 
 // Inline eye / eye-off icon
 function EyeIcon({ open }: { open: boolean }) {
@@ -49,7 +50,7 @@ export default function LoginPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
 
@@ -157,6 +158,7 @@ export default function LoginPage() {
           >
             {loading ? "Logging in..." : "Log in"}
           </button>
+          <DemoLogin />
         </form>
 
         <p className="mt-5 text-center text-sm text-white/50">

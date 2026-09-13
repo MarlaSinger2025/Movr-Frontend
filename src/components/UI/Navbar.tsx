@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import DefaultAvatar from "../../assets/img/default_userAvatar.png";
+import DemoLogin from "../DemoLoginButton";
 
 const Navbar = () => {
   const { user, loading, logout } = useAuth();
@@ -16,11 +17,10 @@ const Navbar = () => {
 
   const decoyLinks = [
     { label: "Home", to: "/" },
-    { label: "My Profile", to: "/me" }, // <-- fill in real path once profile page exists
+    { label: "My Profile", to: "/me" },
     { label: "Browse Activities", to: "/events" },
-    { label: "Messages", to: "" }, // <-- decoy, no page yet
-    { label: "About Us", to: "" }, // <-- decoy, no page yet
-    { label: "Contact MOVR", to: "" }, // <-- decoy, no page yet
+    { label: "Messages", to: "/messages" }, // <-- kind of a decoy, page is there but messaging is not a working function yet
+    { label: "About Movr", to: "" }, // <-- decoy, no page yet
   ];
 
   return (
@@ -45,11 +45,24 @@ const Navbar = () => {
           >
             Login
           </NavLink>
+          <DemoLogin />
         </div>
       )}
 
       {!loading && user && (
         <div className="flex items-center gap-4">
+        
+        {/* Navigation - Desktop view */}
+          <div className="hidden sm:flex items-center gap-6">
+            {decoyLinks
+              .filter((item) => item.to) // so desktop nav filters out decoy menu links with no routes yet
+              .map((item) => (
+                <NavLink key={item.label} to={item.to} className={({ isActive }) => 
+                `text-sm font-medium transition-colors duration-200 hover:underline ${isActive ? 'text-lime-400 font-semibold' : 'text-white'}`
+                }>{item.label}</NavLink>
+              ))}
+          </div>
+
           <NavLink
             to="/createevent"
             className="px-4 py-2 rounded-lg text-sm font-medium bg-lime-400 text-black hover:bg-lime-300 transition-colors duration-200"
@@ -61,7 +74,7 @@ const Navbar = () => {
             {`Hi, ${user.username}`}
           </span>
 
-          <Link to="/me"> {/* <-- fill in real profile path */}
+          <Link to="/me">
             <img
               src={user.profileImage || DefaultAvatar}
               alt={user.username}
@@ -72,7 +85,17 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* Burger - mobile only */}
+          <button
+            onClick={() => {
+              handleLogout();
+              setMenuOpen(false);
+            }}
+            className="hidden sm:flex mt-1 px-3 py-2 rounded-lg text-sm text-left text-red-400 hover:bg-red-400 hover:text-black transition-colors duration-200"
+          >
+            Logout
+          </button>
+
+          {/* Burger menu - mobile only */}
           <button
             className="sm:hidden text-white"
             onClick={() => setMenuOpen((open) => !open)}
