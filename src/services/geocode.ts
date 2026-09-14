@@ -1,16 +1,6 @@
-/**
+/*
  * Converts a free-text address into coordinates using OpenStreetMap's
  * Nominatim service (https://nominatim.org) — free, no API key required.
- *
- * Since Nominatim needs no key, calling it directly from the frontend is
- * safe (nothing secret to leak in the bundle), unlike Google/Mapbox where
- * the key would need to sit behind your own backend. That's why this talks
- * to Nominatim directly rather than going through a /geocode backend route.
- *
- * Usage note: Nominatim's usage policy caps free requests at roughly
- * 1/second and asks for a distinguishing app identifier — fine for
- * dev/demo traffic, but revisit (self-hosted Nominatim, caching, or a
- * paid provider) before this sees real production load.
  */
 
 export interface GeocodeResult {
