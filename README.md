@@ -2,7 +2,7 @@
 
 A sports & activity community app for a English-speaking audience. Create a profile, browse, create, and join local sports activities in your area.
 
-- live deployed app on render: 
+- live deployed app on render: https://movr-app.onrender.com/
 
 ## About this project
 
@@ -11,7 +11,7 @@ Movr started as the final project for my Web Development bootcamp at WBS Coding 
 ## Tech Stack
 
 - React + TypeScript + Vite
-- Tailwind CSS + Daisyui 
+- Tailwind CSS + Daisyui
 - React Router
 - Leaflet + OpenStreetMap for maps
 - lucide-react (icons)
